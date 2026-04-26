@@ -60,17 +60,6 @@ The dataset has a **96% Healthy / 4% Failure** split. To prevent the model from 
 
 ---
 
-## 🔧 Feature Engineering & Preprocessing
-
-| Feature | Transformation | Reason |
-|---|---|---|
-| `Rotational speed [rpm]` | `np.log1p()` | Normalizes right-skewed distribution |
-| All features | `RobustScaler` | Scales using median/IQR — preserves failure-signature outliers |
-| `Type` (L/M/H) | One-hot encoding | Converts categorical machine quality to numeric |
-
-
----
-
 ## 📈 Evaluation Metrics
 
 | Metric | Description |
